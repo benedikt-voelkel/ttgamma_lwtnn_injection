@@ -23,13 +23,13 @@ void m_add_branches(string path,string new_eos_path, string channel, string file
   // TFile *newfile;
   TTree *newtree=nullptr;
 
+  TChain *fChain=nullptr;
   if (filename.find("QCDfakes") != std::string::npos) {
-    TChain *fChain = new TChain("nominal_Loose");
+    fChain = new TChain("nominal_Loose");
   }
   else {
-    TChain *fChain = new TChain("nominal");
+    fChain = new TChain("nominal");
   }
-
 
   fChain->Add((file).c_str());
 
