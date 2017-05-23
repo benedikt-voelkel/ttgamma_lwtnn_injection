@@ -232,12 +232,9 @@ int main(int argc, char** argv)
 
 
   // path to ntuples from AnalysisTop
-  // string path = "/eos/atlas/user/c/caudron/TtGamma_ntuples/v007/SR1/";
   string path = "/eos/atlas/user/j/jwsmith/reprocessedNtuples/v007/QE2/";
-  string channels[] ={"ejets","mujets"};
-  // string channels[] ={"ejets","mujets","emu","mumu","emu"};
+  string channels[] ={"mujets","ejets"};
   string myPath = "/eos/atlas/user/j/jwsmith/reprocessedNtuples/v007_btagVar/QE2/";
-  // string myPath = "./";
 
   for (int i = 1; i < argc; ++i) {
     for(const string &c : channels){
