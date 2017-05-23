@@ -51,6 +51,8 @@ lwt::LightweightNeuralNetwork *m_NeuralNet;
 /////////////////////////////////////////////
 
 
+Float_t         weight_mm_ejets;
+Float_t         weight_mm_mujets;
 Float_t         weight_mc;
 Float_t         weight_pileup;
 Float_t         weight_leptonSF;
@@ -271,6 +273,8 @@ float other_MVA = -1;
 void activateBranches(TChain *chain){
 	// Activate branches for MC chain
 	#define SETBRANCH(branchName) chain->SetBranchAddress(#branchName,&branchName)
+	SETBRANCH(weight_mm_ejets);
+	SETBRANCH(weight_mm_mujets);
 	SETBRANCH(weight_mc);
 	SETBRANCH(weight_pileup);
 	SETBRANCH(weight_leptonSF);
